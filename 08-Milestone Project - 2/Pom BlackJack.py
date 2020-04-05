@@ -194,6 +194,9 @@ while True:
         # Inform Player of their chips total 
     print (f'You have {playerchip.total} chips left.')
         # Ask to play again
+    if playerchip.total==0:
+        print('Game over! You are out of chips!')
+        break
     play_again = input('Do you want to play again? (y/n)')
     while play_again != 'y' and play_again != 'n':
         play_again = input('Please enter y or n')
